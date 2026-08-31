@@ -24,6 +24,12 @@ const expressArchitectureExample = () => {
         res.send("Architecture is working!");
     });
 
-    // app.listen(3000, () => console.log("Server running..."));
+    // 404 Handle
+    app.use((req, res) => res.status(404).send("404 Error: Page Not Found"));
+    
+    // const PORT = 3000;
+    // const server = app.listen(PORT, () => console.log("Architecture Server: http://localhost:" + PORT));
+    // server.on('error', (err) => { if(err.code === 'EADDRINUSE') console.log("Port " + PORT + " busy hai!") });
 };
 // expressArchitectureExample();
+

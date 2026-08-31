@@ -5,16 +5,17 @@ app.use(express.json());
 
 let users = [{ id: 1, name: "Tausif" }];
 
-// GET Method (Data Padhna)
-app.get('/api/users', (req, res) => {
-    res.json(users);
-});
+app.get('/api/users', (req, res) => { res.json(users); });
 
-// POST Method (Data Banana)
 app.post('/api/users', (req, res) => {
     const newUser = { id: users.length + 1, name: req.body.name };
     users.push(newUser);
     res.status(201).json(newUser);
 });
 
-app.listen(6015, () => console.log("🚀 GET/POST Server on http://localhost:6015"));
+// 404 Handle
+app.use((req, res) => res.status(404).json({error: "404 Route Not Found"}));
+
+const PORT = 6015;
+const server = app.listen(PORT, () => console.log("🚀 GET/POST Server on http://localhost:" + PORT));
+server.on('error', (err) => { if(err.code === 'EADDRINUSE') console.log("❌ ERROR: Port " + PORT + " busy hai!"); });

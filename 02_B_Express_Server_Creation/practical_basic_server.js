@@ -12,6 +12,12 @@ app.get('/', (req, res) => {
 
 // 3. Server ko Start (Listen) kiya
 const PORT = 3001;
-app.listen(PORT, () => {
+app.use((req, res) => res.status(404).send("404 Error: Page Not Found!"));
+
+const server = app.listen(PORT, () => {
     console.log(🚀 Basic Express Server chal raha hai 👉 http://localhost: + PORT);
 });
+server.on('error', (err) => {
+    if (err.code === 'EADDRINUSE') console.log(❌ ERROR: Port  + PORT +  pehle se busy hai!);
+});
+

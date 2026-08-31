@@ -1,5 +1,4 @@
 ﻿// ========================================= BASIC ROUTING ======================================= //
-// Node.js me if-else lagana padta tha, Express me direct methods hain.
 const express = require('express');
 const app = express();
 
@@ -11,4 +10,11 @@ app.get('/contact', (req, res) => {
     res.send("<h1>📞 Contact Us</h1>");
 });
 
-app.listen(3003, () => console.log("🚀 Basic Routing Server on http://localhost:3003"));
+// 404 Handle
+app.use((req, res) => {
+    res.status(404).send("<h1 style='color:red;'>404 Error: Page Not Found</h1>");
+});
+
+const PORT = 3003;
+const server = app.listen(PORT, () => console.log("🚀 Basic Routing Server on http://localhost:" + PORT));
+server.on('error', (err) => { if(err.code === 'EADDRINUSE') console.log("❌ ERROR: Port " + PORT + " busy hai!"); });

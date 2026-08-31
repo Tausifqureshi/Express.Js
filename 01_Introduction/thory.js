@@ -16,6 +16,12 @@ const expressIntroExample = () => {
         res.json({ message: "Welcome to Express.js!", developer: "TJ Holowaychuk" });
     });
 
-    // app.listen(3001, () => console.log("Intro Server running..."));
+    // 404 Handle
+    app.use((req, res) => res.status(404).send("404 Error: Page Not Found"));
+    
+    // const PORT = 3001;
+    // const server = app.listen(PORT, () => console.log("Intro Server: http://localhost:" + PORT));
+    // server.on('error', (err) => { if(err.code === 'EADDRINUSE') console.log("Port " + PORT + " busy hai!") });
 };
 // expressIntroExample();
+

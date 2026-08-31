@@ -16,6 +16,12 @@ const expressSetupExample = () => {
         res.send("Setup successfully done!");
     });
 
-    // app.listen(3002, () => console.log("Setup Server running..."));
+    // 404 Handle
+    app.use((req, res) => res.status(404).send("404 Error: Page Not Found"));
+    
+    // const PORT = 3002;
+    // const server = app.listen(PORT, () => console.log("Setup Server: http://localhost:" + PORT));
+    // server.on('error', (err) => { if(err.code === 'EADDRINUSE') console.log("Port " + PORT + " busy hai!") });
 };
 // expressSetupExample();
+

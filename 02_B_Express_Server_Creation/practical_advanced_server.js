@@ -17,9 +17,14 @@ app.get('/', (req, res) => {
 });
 
 app.post('/test', (req, res) => {
-    // Ye tabhi chalega jab app.use(express.json()) laga ho
     const data = req.body;
     res.status(201).json({ message: "Data received successfully!", yourData: data });
+});
+
+// 404 Handler (Hamesha end me)
+app.use((req, res) => {
+    res.status(404).json({ error: "404 Error: Route nahi mila!" });
+});
 });
 
 // C. Port Error Handling (Advanced)
@@ -38,3 +43,4 @@ server.on('error', (err) => {
         console.log("❌ SERVER ERROR:", err.message);
     }
 });
+
