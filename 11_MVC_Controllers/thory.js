@@ -9,7 +9,24 @@
 // Isse "Spaghetti Code" (khichdi) se bacha jata hai.
 
 const mvcExample = () => {
-    // MVC ka asli code 12_Routes_and_Controllers_Structure wale folder me dekh sakte hain
-    console.log("MVC pattern separates concerns into Models, Views, and Controllers.");
+    const express = require('express');
+    const app = express();
+    
+    // MODEL (Dummy Data)
+    const usersData = [{ id: 1, name: "Tausif" }, { id: 2, name: "Aman" }];
+
+    // CONTROLLER (Logic)
+    const getAllUsers = (req, res) => {
+        // Logic yahan chalta hai aur Model se data lekar View (Client) ko bhejta hai
+        res.status(200).json({ success: true, data: usersData });
+    };
+
+    // ROUTE
+    app.get('/users', getAllUsers);
+
+    // const PORT = 3012;
+    // app.listen(PORT, () => {
+    //     console.log(MVC Server is running on http://localhost:);
+    // });
 };
 // mvcExample();

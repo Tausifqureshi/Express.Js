@@ -8,13 +8,20 @@
 
 const thirdPartyExample = () => {
     const express = require('express');
-    // const morgan = require('morgan'); // Requires npm install morgan
     const app = express();
-
+    
+    // Asli duniya me hum isko aise import aur use karte hain:
+    // const morgan = require('morgan'); 
     // app.use(morgan('dev'));
 
-    app.get('/', (req, res) => res.send("Hello"));
+    app.get('/api/data', (req, res) => {
+        // Agar morgan laga hota, toh terminal pe URL aur time khud print ho jata
+        res.json({ message: "Third party middlewares make life easy!" });
+    });
 
-    // app.listen(3011, () => console.log("Third-Party Server..."));
+    // const PORT = 3011;
+    // app.listen(PORT, () => {
+    //     console.log(Third-Party Middleware Server is running on http://localhost:);
+    // });
 };
 // thirdPartyExample();

@@ -8,10 +8,25 @@
 
 const routerExample = () => {
     const express = require('express');
+    const app = express();
+    
+    // ================== routes/userRoutes.js ==================
     const router = express.Router();
     
-    // router.get('/', someControllerFunction);
+    // Yahan Controller logic define hai (Asliat me dusri file me hota hai)
+    const userControllerFunction = (req, res) => {
+        res.send("List of all users from Controller");
+    };
+
+    router.get('/', userControllerFunction);
     
-    console.log("Router setup successfully");
+    // ================== server.js (Main File) ==================
+    // Main file me bas Router ko import karke jod dete hain
+    app.use('/api/users', router);
+
+    // const PORT = 3013;
+    // app.listen(PORT, () => {
+    //     console.log(Router Server is running on http://localhost:);
+    // });
 };
 // routerExample();

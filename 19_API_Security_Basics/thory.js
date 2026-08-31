@@ -7,8 +7,31 @@
 // 3. Rate Limiting: 1 second me 1000 request bhej kar server down karne (DDoS) se bachata hai.
 
 const securityExample = () => {
+    const express = require('express');
+    const app = express();
+
+    // Requires: npm install helmet express-rate-limit
     // const helmet = require('helmet');
-    // app.use(helmet());
-    console.log("Security Enabled");
+    // const rateLimit = require('express-rate-limit');
+
+    // 1. Helmet setup for headers
+    // app.use(helmet()); 
+
+    // 2. Rate Limiting Setup
+    // const limiter = rateLimit({
+    //     windowMs: 15 * 60 * 1000, // 15 mins
+    //     max: 100, // Sirf 100 requests per IP allow karega
+    //     message: "Aapne had se zyada requests ki hain. Baad me aayiye!"
+    // });
+    // app.use(limiter);
+
+    app.get('/', (req, res) => {
+        res.send("API is Secure Now!");
+    });
+
+    // const PORT = 3019;
+    // app.listen(PORT, () => {
+    //     console.log(Security Server is running on http://localhost:);
+    // });
 };
 // securityExample();
