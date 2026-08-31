@@ -1,22 +1,15 @@
-﻿// =========================================
-// 01. Introduction to Express.js (Theory)
-// =========================================
+﻿// ========================================= Express.js Kya Hai? ======================================= //
+// ChatGPT Se Liya Hua Syntex ---> 
+// Node.js ek runtime environment hai jo JavaScript ko server par chalata hai. 
+// Lekin raw Node.js (http module) me routing aur API banana thoda complex aur lamba ho jata hai.
+// Isiliye 'TJ Holowaychuk' ne Express.js banaya. Ye Node.js ke upar ek wrapper (framework) hai jo web applications aur APIs banana behad asaan aur fast kar deta hai.
+// Ye MERN stack (MongoDB, Express, React, Node.js) ka 'E' hai!
 
-/*
-Bhai, Node.js seekhte waqt humne dekha ki 'http' module kitna lamba aur complex ho jata hai routing handle karne me.
-Usi complexity ko hatane aur kaam asaan karne ke liye Express.js banaya gaya hai.
+// ========================================= Express.js Kyu Famous Hai? ======================================= //
+// 1. Simplicity & Less Code: Jo kaam raw Node.js me if-else lagakar 50 line me hota hai, Express usko 10 line me kar deta hai.
+// 2. Powerful Routing: Isme app.get(), app.post() jaise methods direct available hain, URL match karne ke liye lamba logic nahi likhna padta.
+// 3. Middleware Support: Request aane aur Response jaane ke beech me agar koi checking (jaise User Logged In hai ya nahi) karni ho, toh middlewares ka use bohot easy hai.
+// 4. Easy JSON Handling: JSON data bhejne aur receive karne ke liye manually headers set karne ki zaroorat nahi padti (bas res.json() use karo).
 
-1. Express.js kya hai?
-----------------------
-Ye Node.js ka sabse famous aur popular Web Framework hai. Ye Node.js ke upar ek extra layer hai jo sab kuch asaan bana deti hai.
-
-2. Express ke fayde (Old vs New tarika)
----------------------------------------
-- OLD (Node.js): If-else lagakar routes check karna padta tha.
-- NEW (Express): Seedha app.get('/route') se kaam ho jata hai!
-
-- OLD (Node.js): JSON bhejne ke liye JSON.stringify aur header set karna padta tha.
-- NEW (Express): Sirf res.json(data) likho aur Express khud sab sambhal lega!
-
-Next folder (02_Express_Setup) me hum practical dekhenge ki isko setup aur install kaise karna hai!
-*/
+// ========================================= Express.js Kahan Use Hota Hai? ======================================= //
+// ✅ Use cases: RESTful APIs banane me, Single Page Applications (React/Angular) ke backend me, Microservices me.
