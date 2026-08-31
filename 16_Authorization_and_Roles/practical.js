@@ -1,9 +1,30 @@
-﻿const express = require('express');
+﻿// ========================================================================================= //
+// PRACTICAL: AUTHORIZATION MIDDLEWARE (Roles)
+// Run: node 16_Authorization_and_Roles/practical.js
+// ========================================================================================= //
+const express = require('express');
 const app = express();
 
-// 16_Authorization_and_Roles ka practical code yahan aayega
+// Fake User (Man lo Token se ye data aaya hai)
+const loggedInUser = { id: 1, name: "Tausif", role: "user" };
 
-app.listen(3000, () => {
-    console.log('✅ Server chalu hai!');
+// Middleware for checking Admin Role
+const isAdmin = (req, res, next) => {
+    if (loggedInUser.role === 'admin') {
+        next(); // Admin hai, jaane do
+    } else {
+        res.status(403).json({ error: "Access Denied! Tum admin nahi ho." });
+    }
+};
+
+// Normal User ka Route (Koi bhi dekh sakta hai)
+app.get('/profile', (req, res) => {
+    res.send("Welcome to Normal Profile Page!");
 });
 
+// Admin Route (Sirf Admin dekh sakta hai, isliye 'isAdmin' lagaya hai)
+app.get('/admin-panel', isAdmin, (req, res) => {
+    res.send("Welcome to Top Secret Admin Panel!");
+});
+
+app.listen(6008, () => console.log("🚀 Role Server on http://localhost:6008"));
