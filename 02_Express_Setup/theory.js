@@ -1,20 +1,41 @@
-﻿// ========================================= Express Setup (NPM & Install) ======================================= //
-// ChatGPT Se Liya Hua Syntex --->
-// Express.js Node.js ka built-in module nahi hai (jaise 'http' ya 'fs' hota hai). Isliye ise externally download karna padta hai.
-// Download karne ke liye hum NPM (Node Package Manager) ka use karte hain.
+﻿/*
+======================================================================================
+                          EXPRESS SETUP & INSTALLATION
+======================================================================================
+(Note: Express.js ko hum directly use nahi kar sakte. Ise NPM ke zariye download 
+karna padta hai apne project me.)
 
-// ========================================= Setup Steps ======================================= //
-// 1. Project Initialize Karna (package.json banana):
-//    Terminal me likho: npm init -y
-//    Ye aapke folder me 'package.json' banayega jo project ki kundali (details) rakhta hai.
+--- STEP-BY-STEP SETUP (Line-by-Line Explanation) ---
 
-// 2. Express Install Karna:
-//    Terminal me likho: npm install express
-//    Ye internet se Express ka code download karke 'node_modules' folder me rakh dega aur 'package.json' me iski entry kar dega.
+1. Initialize the Project (package.json):
+   Terminal me command chalao: 
+pm init -y
+   Ye aapke folder me ek 'package.json' file bana dega. Ye file aapke project ka 
+   Aadhar Card hai, isme likha hoga ki project ka naam kya hai aur isme kaun-kaun 
+   si libraries (dependencies) install hain.
 
-// 3. Express ko File me Lana (Require karna):
-//    const express = require('express');
+2. Install Express.js:
+   Terminal me command chalao: 
+pm install express
+   Ye command internet (npm registry) se Express ka saara code download karegi. 
+   Ye download hokar 'node_modules' naam ke folder me save hota hai.
+   (⚠️ Important: node_modules ko kabhi git par push nahi karte, isliye .gitignore me dalte hain)
 
-// 4. App Banana:
-//    const app = express();
-//    Ye 'app' ek object hai jiske paas saari shaktiyan hain (routes banane ki, server chalane ki).
+3. Import & Initialize in Code:
+   Ab aap 	heory.js ya practical.js me Express ko bula sakte ho:
+   const express = require('express');
+   Phie usko start karne ke liye:
+   const app = express();
+   Ab ye 'app' aapka poora server sambhalega!
+
+======================================================================================
+                          SUMMARY
+======================================================================================
+🔴 BINA EXPRESS (Raw Node.js)
+- Koi third-party library nahi thi, sirf 'http' use hota tha.
+
+🟢 EXPRESS KE SATH (New Way)
+- Hum 'npm' ka use karke duniya bhar ke developers ki banayi libraries apne project 
+  me asani se laa sakte hain!
+======================================================================================
+*/
