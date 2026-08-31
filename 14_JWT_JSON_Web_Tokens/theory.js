@@ -1,9 +1,5 @@
-﻿// =========================================
-// 14_JWT_JSON_Web_Tokens (Theory)
-// =========================================
-
-/*
-Bhai, yahan par hum 14_JWT_JSON_Web_Tokens ka concept samjhenge.
-Jaldi hi isme detail theory add ki jayegi!
-*/
-
+﻿// ========================================= JWT (JSON Web Tokens) ======================================= //
+// ChatGPT Se Liya Hua Syntex --->
+// JWT ek Digital ID Card ki tarah hai.
+// Jab user login karta hai, Backend usko ye JWT token banakar bhejta hai.
+// Agli baar jab user koi API hit karega (jaise profile dekhna), toh wo is Token ko sath bhejega taaki Backend usko pehchaan sake (Authentication).

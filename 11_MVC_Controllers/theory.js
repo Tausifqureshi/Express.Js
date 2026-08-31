@@ -1,9 +1,6 @@
-﻿// =========================================
-// 11_MVC_Controllers (Theory)
-// =========================================
-
-/*
-Bhai, yahan par hum 11_MVC_Controllers ka concept samjhenge.
-Jaldi hi isme detail theory add ki jayegi!
-*/
-
+﻿// ========================================= MVC Architecture ======================================= //
+// ChatGPT Se Liya Hua Syntex --->
+// MVC (Model-View-Controller) ek pattern hai code ko saaf rakhne ka.
+// - Model: Database ka logic (MongoDB).
+// - View: Frontend UI (React / HTML).
+// - Controller: Beech ka dimaag (Brain). Jo Model se data lekar View ko deta hai. Express me hum mainly Controllers banate hain.
