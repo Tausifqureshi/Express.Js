@@ -20,10 +20,10 @@ app.get('/', (req, res) => {
         </head>
         <body>
             <div class="card">
-                <h1>🏠 Welcome to Tausif's Express Home Page</h1>
+                <h1>Welcome to Tausif's Express Home Page</h1>
                 <p>Status: <strong>200 OK</strong> | HTML Webpage Rendered!</p>
                 <hr>
-                <p>👉 Agar React/Mobile App ke liye JSON API Data chahiye toh click karein: <a href="/api/info">/api/info (JSON API)</a></p>
+                <p>Agar React/Mobile App ke liye JSON API Data chahiye toh click karein: <a href="/api/info">/api/info (JSON API)</a></p>
             </div>
         </body>
         </html>
@@ -63,11 +63,11 @@ app.use((req, res) => {
 
 const PORT = 3001;
 app.listen(PORT, () => {
-    console.log("🚀 Basic Express Server running on http://localhost:" + PORT);
+    console.log("[SERVER RUNNING] Basic Express Server running on http://localhost:" + PORT);
 }).on('error', (err) => {
     if (err.code === 'EADDRINUSE') {
-        console.log("❌ ERROR: Port " + PORT + " pehle se busy hai!");
+        console.log("[ERROR] Port " + PORT + " pehle se busy hai!");
     } else {
-        console.log("❌ SERVER ERROR: " + err.message);
+        console.log("[SERVER ERROR] " + err.message);
     }
 });
