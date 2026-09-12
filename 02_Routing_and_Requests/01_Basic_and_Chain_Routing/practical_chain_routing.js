@@ -18,7 +18,7 @@ app.route('/api/book')
         res.status(200).json({ success: true, action: "DELETE", message: "Book deleted successfully!" });
     });
 
-app.use((req, res) => {
+app.use((req, res) => {  
     res.status(404).json({ success: false, message: "404 Error: Route Not Found!" });
 });
 
