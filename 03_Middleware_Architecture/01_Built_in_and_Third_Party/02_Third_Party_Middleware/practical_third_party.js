@@ -1,7 +1,6 @@
-﻿// ========================================================================================= //
+// ========================================================================================= //
 // PRACTICAL: THIRD-PARTY MIDDLEWARE (Morgan Example)
-// (Note: Isko run karne se pehle 
-// pm install morgan zaroor karna!)
+// (Note: Isko run karne se pehle npm install morgan zaroor karna!)
 // Run: node 02_Third_Party_Middleware/practical_third_party.js
 // ========================================================================================= //
 
@@ -18,7 +17,8 @@ app.use(morgan('dev'));
 */
 
 app.get('/test', (req, res) => {
-    // Bina Morgan ke humein khud console.log("Request Aayi") likhna padta res.status(200).send("Morgan ne aapki request Terminal me print kar di hogi!");
+    // Bina Morgan ke humein khud console.log("Request Aayi") likhna padta
+    res.status(200).send("Morgan ne aapki request Terminal me print kar di hogi!");
 });
 
 app.listen(4002, () => {

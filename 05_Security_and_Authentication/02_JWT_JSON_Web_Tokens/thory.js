@@ -1,4 +1,4 @@
-﻿// ========================================= JWT (JSON Web Tokens) ======================================= //
+// ========================================= JWT (JSON Web Tokens) ======================================= //
 // ChatGPT Se Liya Hua Syntex --->
 // JWT ek secure digital token hai jo API yaadash (stateless) ko solve karta hai.
 //
@@ -19,7 +19,8 @@ const jwtExample = () => {
         const userPayload = { userId: 105, role: "user" };
         
         // Token Banaya
-        // const token = jwt.sign(userPayload, SECRET_KEY, { expiresIn: '1h' }); res.status(200).json({ message: "Login successful!", token: "dummy_jwt_token_here" });
+        // const token = jwt.sign(userPayload, SECRET_KEY, { expiresIn: '1h' });
+        res.status(200).json({ message: "Login successful!", token: "dummy_jwt_token_here" });
     });
 
     app.get('/protected-profile', (req, res) => {
@@ -28,10 +29,11 @@ const jwtExample = () => {
         
         // try {
         //     const decoded = jwt.verify(token, SECRET_KEY);
-        // res.status(200).json({ message: "Welcome!", userData: decoded });
+        //     res.status(200).json({ message: "Welcome!", userData: decoded });
         // } catch(err) {
         //     res.status(403).send("Invalid Token!");
-        // } res.status(200).send("Protected profile route working!");
+        // }
+        res.status(200).send("Protected profile route working!");
     });
 
     // const PORT = 3014;

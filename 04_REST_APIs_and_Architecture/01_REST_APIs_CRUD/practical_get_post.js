@@ -1,4 +1,4 @@
-﻿// ========================================= RESTful CRUD API Practical ======================================= //
+// ========================================= RESTful CRUD API Practical ======================================= //
 // Real-world scenario: Full REST API implementation for User Management (GET, POST, PUT, DELETE).
 
 const express = require('express');
@@ -40,12 +40,12 @@ const runRestApiPractical = () => {
     const PORT = 6015;
 
     app.listen(PORT, () => {
-        console.log("🚀 REST CRUD API Server is running! 👉 http://localhost: + PORT");
+        console.log(`🚀 REST CRUD API Server is running! 👉 http://localhost:${PORT}`);
     }).on('error', (err) => {
         if (err.code === 'EADDRINUSE') {
-            console.log("❌ ERROR: Port  + PORT +  pehle se busy hai!");
+            console.log(`❌ ERROR: Port ${PORT} pehle se busy hai!`);
         } else {
-            console.log("❌ SERVER ERROR:", err.message");
+            console.log("❌ SERVER ERROR:", err.message);
         }
     });
 };

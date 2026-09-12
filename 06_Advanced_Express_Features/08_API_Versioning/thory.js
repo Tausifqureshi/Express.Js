@@ -1,4 +1,4 @@
-﻿// ========================================= API VERSIONING ======================================= //
+// ========================================= API VERSIONING ======================================= //
 // ChatGPT Se Liya Hua Syntex --->
 // Web development me jab hum Nayi API release karte hain (v2), toh purane Mobile Apps ya Frontend clients ko break hone se bachane ke liye API Versioning ki jati hai.
 //
@@ -26,7 +26,7 @@ const apiVersioningExample = () => {
     app.use((req, res) => res.status(404).json({ error: "404 Route Not Found" }));
 
     const PORT = 3026;
-    // const server = app.listen(PORT, () => console.log("Versioning Server running on http://localhost: + PORT);
+    // const server = app.listen(PORT, () => console.log(`Versioning Server running on http://localhost:${PORT}`));
     // server.on('error', (err) => { if (err.code === 'EADDRINUSE') console.log("Port busy hai!"); });
 };
 // apiVersioningExample();

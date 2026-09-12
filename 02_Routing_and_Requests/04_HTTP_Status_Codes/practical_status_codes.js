@@ -1,11 +1,11 @@
-﻿// ========================================= HTTP STATUS CODES PRACTICAL ======================================= //
+// ========================================= HTTP STATUS CODES PRACTICAL ======================================= //
 const express = require('express');
 const app = express();
 app.use(express.json());
 
 // 1. 200 OK (GET Success)
 app.get('/api/status/200', (req, res) => {
-    console.log("[REQ 200] Fetching data for  + req.url");
+    console.log(`[REQ 200] Fetching data for ${req.url}`);
     res.status(200).json({ success: true, statusCode: 200, message: "200 OK: Data retrieved successfully!" });
 });
 
@@ -53,9 +53,9 @@ app.use((req, res) => {
 
 const PORT = 3012;
 app.listen(PORT, () => {
-    console.log("🚀 HTTP Status Codes Server running on http://localhost: + PORT");
+    console.log(`🚀 HTTP Status Codes Server running on http://localhost:${PORT}`);
 }).on('error', (err) => {
-    if (err.code === 'EADDRINUSE') console.log("❌ ERROR: Port  + PORT +  pehle se busy hai!");
-    else console.log("❌ SERVER ERROR:", err.message");
+    if (err.code === 'EADDRINUSE') console.log(`❌ ERROR: Port ${PORT} pehle se busy hai!`);
+    else console.log("❌ SERVER ERROR:", err.message);
 });
 

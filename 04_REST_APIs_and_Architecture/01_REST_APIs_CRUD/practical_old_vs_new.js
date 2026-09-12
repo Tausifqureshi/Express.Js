@@ -1,4 +1,4 @@
-﻿// ========================================= Old vs New: JSON API (REST) ======================================= //
+// ========================================= Old vs New: JSON API (REST) ======================================= //
 const http = require('http');
 const express = require('express');
 
@@ -17,7 +17,7 @@ const runRestComparison = () => {
             res.end(JSON.stringify(users));
         }
     });
-    oldServer.listen(3001, () => console.log("Old Style API on 3001");
+    oldServer.listen(3001, () => console.log("Old Style API on 3001"));
 
     // ========================================================================================= //
     // TARIKA 2: New Style (Express.js) - Ek line me JSON ready!
@@ -25,10 +25,11 @@ const runRestComparison = () => {
     const app = express();
 
     app.get('/api/users', (req, res) => {
-        // Express khud Header set karega, aur khud JSON.stringify bhi karega! res.status(200).json(users); 
+        // Express khud Header set karega, aur khud JSON.stringify bhi karega!
+        res.status(200).json(users);
     });
 
-    app.listen(3002, () => console.log("New Style Express API on 3002");
+    app.listen(3002, () => console.log("New Style Express API on 3002"));
 };
 runRestComparison();
 

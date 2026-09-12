@@ -1,4 +1,4 @@
-﻿// ========================================= ROUTE & QUERY PARAMETERS ======================================= //
+// ========================================= ROUTE & QUERY PARAMETERS ======================================= //
 // ChatGPT Se Liya Hua Syntex --->
 // Kabhi-kabhi humein URL me aisi value bhejna hoti hai jo fix nahi hoti (jaise har user ka ID alag hota hai).
 //
@@ -11,10 +11,10 @@ const parametersExample = () => {
     const app = express();
 
     app.get('/user/:id', (req, res) => {
-        console.log("Param aaya:", req.params.id"); res.status(200).send("Param mila!");
+        console.log("Param aaya:", req.params.id); res.status(200).send("Param mila!");
     });
 
-    // app.listen(3005, () => console.log("Params Server running...");
+    // app.listen(3005, () => console.log("Params Server running..."));
 };
 // parametersExample();
 

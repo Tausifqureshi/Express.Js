@@ -1,4 +1,4 @@
-﻿// ========================================= REAL-WORLD ROUTE & QUERY PARAMS ======================================= //
+// ========================================= REAL-WORLD ROUTE & QUERY PARAMS ======================================= //
 const express = require('express');
 const app = express();
 
@@ -23,7 +23,7 @@ app.get('/api/products/search', (req, res) => {
     res.status(200).json({
         success: true,
         query: { category, page: Number(page), limit: Number(limit) },
-        results: [Product 1 ( + category + ), Product 2 ( + category + )]
+        results: [`Product 1 (${category})`, `Product 2 (${category})`]
     });
 });
 
@@ -34,9 +34,9 @@ app.use((req, res) => {
 
 const PORT = 6013;
 app.listen(PORT, () => {
-    console.log("🚀 Params Server running on http://localhost: + PORT");
+    console.log(`🚀 Params Server running on http://localhost:${PORT}`);
 }).on('error', (err) => {
-    if (err.code === 'EADDRINUSE') console.log("❌ ERROR: Port  + PORT +  pehle se busy hai!");
-    else console.log("❌ SERVER ERROR:", err.message");
+    if (err.code === 'EADDRINUSE') console.log(`❌ ERROR: Port ${PORT} pehle se busy hai!`);
+    else console.log("❌ SERVER ERROR:", err.message);
 });
 

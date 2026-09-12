@@ -1,4 +1,4 @@
-﻿// ========================================= MONGODB CONNECTION (MONGOOSE) ======================================= //
+// ========================================= MONGODB CONNECTION (MONGOOSE) ======================================= //
 // ChatGPT Se Liya Hua Syntex --->
 // Express.js ka sabse bada dost MongoDB hota hai (MERN stack). Express ko MongoDB se jodne ke liye mongoose naam ka package use hota hai.
 //
@@ -23,7 +23,7 @@ const mongooseExample = () => {
     app.use((req, res) => res.status(404).json({ error: "404 Route Not Found" }));
 
     // const PORT = 3024;
-    // const server = app.listen(PORT, () => console.log("DB Server running on http://localhost: + PORT)");
+    // const server = app.listen(PORT, () => console.log(`DB Server running on http://localhost:${PORT}`));
     // server.on('error', (err) => { if (err.code === 'EADDRINUSE') console.log("Port busy hai!"); });
 };
 // mongooseExample();

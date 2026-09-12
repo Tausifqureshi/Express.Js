@@ -1,4 +1,4 @@
-﻿// ========================================= PUT & DELETE API ======================================= //
+// ========================================= PUT & DELETE API ======================================= //
 const express = require('express');
 const app = express();
 app.use(express.json());
@@ -20,5 +20,5 @@ app.delete('/api/users/:id', (req, res) => {
     users = users.filter(u => u.id !== parseInt(req.params.id)); res.status(200).json({ message: "User Deleted" });
 });
 
-app.listen(6016, () => console.log("🚀 PUT/DELETE Server on http://localhost:6016");
+app.listen(6016, () => console.log("🚀 PUT/DELETE Server on http://localhost:6016"));
 

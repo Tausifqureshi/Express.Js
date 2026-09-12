@@ -1,4 +1,4 @@
-﻿// ========================================= SERVING STATIC FILES ======================================= //
+// ========================================= SERVING STATIC FILES ======================================= //
 // ChatGPT Se Liya Hua Syntex --->
 // Jab hum website banate hain, toh usme sirf text ya JSON nahi hota, balki CSS files, images, aur PDFs bhi hote hain.
 // Node.js (raw http module) me in files ko dikhana bohot mushkil tha. Express ise ek line me solve kar deta hai.
@@ -21,7 +21,7 @@ const staticFilesExample = () => {
     app.use((req, res) => res.status(404).json({ error: "404 Route Not Found" }));
 
     // const PORT = 3022;
-    // const server = app.listen(PORT, () => console.log("Static Server running on http://localhost: + PORT)");
+    // const server = app.listen(PORT, () => console.log(`Static Server running on http://localhost:${PORT}`));
     // server.on('error', (err) => { if (err.code === 'EADDRINUSE') console.log("Port busy hai!"); });
 };
 // staticFilesExample();

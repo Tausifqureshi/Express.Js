@@ -1,4 +1,4 @@
-﻿// ========================================= 2. Advanced Core Express Server Practical ======================================= //
+// ========================================= 2. Advanced Core Express Server Practical ======================================= //
 // Express.js me req.body, req.url, req.method aur headers ko Advanced Level par handle karna.
 
 const express = require('express');
@@ -16,7 +16,7 @@ const runAdvancedExpressServer = () => {
         const requestMethod = req.method;
         const requestUrl = req.url;
 
-        console.log("[GET REQUEST] Method:  + requestMethod +  | URL:  + requestUrl");
+        console.log(`[GET REQUEST] Method: ${requestMethod} | URL: ${requestUrl}`);
 
         res.status(200).json({
             server: "Express.js (Modern)",
@@ -36,7 +36,7 @@ const runAdvancedExpressServer = () => {
         // Extracting data from req.body
         const { username, password } = req.body;
 
-        console.log("[POST REQUEST] Method:  + requestMethod +  | URL:  + requestUrl +  | Content-Type:  + contentType");
+        console.log(`[POST REQUEST] Method: ${requestMethod} | URL: ${requestUrl} | Content-Type: ${contentType}`);
 
         if (!username || !password) {
             return res.status(400).json({ success: false, message: "400 Bad Request: Username and password required!" });
@@ -56,7 +56,7 @@ const runAdvancedExpressServer = () => {
 
     // 404 Route Catch-All
     app.use((req, res) => {
-        console.log("[404 NOT FOUND] Unknown Path:  + req.url +  | Method:  + req.method");
+        console.log(`[404 NOT FOUND] Unknown Path: ${req.url} | Method: ${req.method}`);
         res.status(404).json({ success: false, message: "404 Error: Route " + req.url + " not found!" });
     });
 
@@ -64,13 +64,13 @@ const runAdvancedExpressServer = () => {
 
     app.listen(PORT, () => {
         console.log("🚀 Modern Express Server is running!");
-        console.log("👉 Home API check karein: http://localhost: + PORT");
-        console.log("👉 POST API ke liye Postman use karein: http://localhost: + PORT + /api/login");
+        console.log(`👉 Home API check karein: http://localhost:${PORT}`);
+        console.log(`👉 POST API ke liye Postman use karein: http://localhost:${PORT}/api/login`);
     }).on('error', (err) => {
         if (err.code === 'EADDRINUSE') {
-            console.log("❌ ERROR: Port  + PORT +  pehle se busy hai!");
+            console.log(`❌ ERROR: Port ${PORT} pehle se busy hai!`);
         } else {
-            console.log("❌ SERVER ERROR:" + err.message);
+            console.log("❌ SERVER ERROR: " + err.message);
         }
     });
 };

@@ -1,4 +1,4 @@
-﻿// ========================================= REAL-WORLD EXPRESS REQUEST OBJECT (req) ======================================= //
+// ========================================= REAL-WORLD EXPRESS REQUEST OBJECT (req) ======================================= //
 // Real-world scenario: E-commerce order lookup using req.params, req.query, req.body, req.headers, and req.ip.
 
 const express = require('express');
@@ -29,7 +29,7 @@ const runRequestObjectPractical = () => {
         const url = req.url;
         const ip = req.ip;
 
-        console.log("[ORDER API REQ] Processing Order ID:  + orderId +  for  + customerEmail");
+        console.log(`[ORDER API REQ] Processing Order ID: ${orderId} for ${customerEmail}`);
 
         if (!customerEmail || !paymentMethod) {
             return res.status(400).json({
@@ -73,10 +73,10 @@ const runRequestObjectPractical = () => {
 
     const PORT = 3011;
     app.listen(PORT, () => {
-        console.log("🚀 Request Object Server running on http://localhost: + PORT");
+        console.log(`🚀 Request Object Server running on http://localhost:${PORT}`);
     }).on('error', (err) => {
-        if (err.code === 'EADDRINUSE') console.log("❌ ERROR: Port  + PORT +  pehle se busy hai!");
-        else console.log("❌ SERVER ERROR:", err.message");
+        if (err.code === 'EADDRINUSE') console.log(`❌ ERROR: Port ${PORT} pehle se busy hai!`);
+        else console.log("❌ SERVER ERROR:", err.message);
     });
 };
 

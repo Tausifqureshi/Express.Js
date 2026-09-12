@@ -1,4 +1,4 @@
-﻿// ========================================= REAL-WORLD EXPRESS RESPONSE OBJECT (res) ======================================= //
+// ========================================= REAL-WORLD EXPRESS RESPONSE OBJECT (res) ======================================= //
 // Real-world scenario: Different response types (JSON data, HTML render, Status Codes) sent back to client via res.
 
 const express = require('express');
@@ -20,7 +20,7 @@ const runResponseObjectPractical = () => {
 
     // 2. res.status(200).send() -> Render HTML Dashboard
     app.get('/dashboard', (req, res) => {
-        const html = 
+        const html = `
             <html>
                 <head><title>Express Dashboard</title></head>
                 <body style="font-family: sans-serif; text-align: center; margin-top: 50px;">
@@ -28,7 +28,7 @@ const runResponseObjectPractical = () => {
                     <p>Returned via res.status(200).send() with text/html headers automatically!</p>
                 </body>
             </html>
-        ;
+        `;
         res.status(200).send(html);
     });
 
@@ -54,10 +54,10 @@ const runResponseObjectPractical = () => {
 
     const PORT = 3005;
     app.listen(PORT, () => {
-        console.log("🚀 Response Object Server running on http://localhost: + PORT");
+        console.log(`🚀 Response Object Server running on http://localhost:${PORT}`);
     }).on('error', (err) => {
-        if (err.code === 'EADDRINUSE') console.log("❌ ERROR: Port  + PORT +  pehle se busy hai!");
-        else console.log("❌ SERVER ERROR:", err.message");
+        if (err.code === 'EADDRINUSE') console.log(`❌ ERROR: Port ${PORT} pehle se busy hai!`);
+        else console.log("❌ SERVER ERROR:", err.message);
     });
 };
 

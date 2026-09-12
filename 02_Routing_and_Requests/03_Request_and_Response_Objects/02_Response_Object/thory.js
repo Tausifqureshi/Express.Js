@@ -1,6 +1,6 @@
-﻿// ========================================= THE RESPONSE OBJECT (res) ======================================= //
+// ========================================= THE RESPONSE OBJECT (res) ======================================= //
 // ChatGPT Se Liya Hua Syntex --->
-// Server jab apna logic complete kar leta hai, toh usko user ko jawab dena hota hai es object ke zariye.
+// Server jab apna logic complete kar leta hai, toh usko user ko jawab dena hota hai res object ke zariye.
 //
 // 1. res.status(200).send(): Text, HTML, ya Array bhejne ke liye.
 // 2. res.status(200).json(): Proper JSON API banane ke liye (React apps ke liye).
@@ -15,7 +15,6 @@ const responseObjectExample = () => {
         res.status(200).json({ success: true, message: "Response Sent!" });
     });
 
-    // app.listen(3007, () => console.log("Res Server running...");
+    // app.listen(3007, () => console.log("Res Server running..."));
 };
 // responseObjectExample();
-

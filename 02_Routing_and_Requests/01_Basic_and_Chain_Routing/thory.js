@@ -1,4 +1,4 @@
-﻿// ========================================= ROUTING IN EXPRESS.JS ======================================= //
+// ========================================= ROUTING IN EXPRESS.JS ======================================= //
 // ChatGPT Se Liya Hua Syntex --->
 // Routing ka matlab hota hai ki jab user alag-alag URLs (jaise '/about', '/contact') par visit kare, toh server usko kya response dega.
 //
@@ -16,7 +16,7 @@ const routingExample = () => {
     app.post('/login', (req, res) => { res.status(200).send("Login Page");
     });
 
-    // app.listen(3003, () => console.log("Routing Server running...");
+    // app.listen(3003, () => console.log("Routing Server running..."));
 };
 // routingExample();
 

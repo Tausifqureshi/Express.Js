@@ -1,4 +1,4 @@
-﻿// ========================================= ENVIRONMENT VARIABLES (.env) ======================================= //
+// ========================================= ENVIRONMENT VARIABLES (.env) ======================================= //
 // ChatGPT Se Liya Hua Syntex --->
 // Jab hum code ko Github par daalte hain, toh hum apna Database password ya Secret Key sabko nahi dikhana chahte.
 // 
@@ -21,7 +21,7 @@ const dotenvExample = () => {
     app.use((req, res) => res.status(404).json({ error: "404 Route Not Found" }));
 
     // const PORT = process.env.PORT || 3021;
-    // const server = app.listen(PORT, () => console.log("Env Server running on http://localhost: + PORT)");
+    // const server = app.listen(PORT, () => console.log(`Env Server running on http://localhost:${PORT}`));
     // server.on('error', (err) => { if (err.code === 'EADDRINUSE') console.log("Port busy hai!"); });
 };
 // dotenvExample();

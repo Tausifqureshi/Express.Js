@@ -1,4 +1,4 @@
-﻿// ========================================= CHAIN ROUTING PRACTICAL ======================================= //
+// ========================================= CHAIN ROUTING PRACTICAL ======================================= //
 const express = require('express');
 const app = express();
 app.use(express.json());
@@ -24,9 +24,9 @@ app.use((req, res) => {
 
 const PORT = 3004;
 app.listen(PORT, () => {
-    console.log("🚀 Chain Routing Server running on http://localhost: + PORT");
+    console.log(`🚀 Chain Routing Server running on http://localhost:${PORT}`);
 }).on('error', (err) => {
-    if (err.code === 'EADDRINUSE') console.log("❌ ERROR: Port  + PORT +  pehle se busy hai!");
-    else console.log("❌ SERVER ERROR:", err.message");
+    if (err.code === 'EADDRINUSE') console.log(`❌ ERROR: Port ${PORT} pehle se busy hai!`);
+    else console.log("❌ SERVER ERROR:", err.message);
 });
 

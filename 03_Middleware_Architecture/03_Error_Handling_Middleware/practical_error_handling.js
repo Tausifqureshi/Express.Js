@@ -1,4 +1,4 @@
-﻿// ========================================= ERROR HANDLING MIDDLEWARE PRACTICAL ======================================= //
+// ========================================= ERROR HANDLING MIDDLEWARE PRACTICAL ======================================= //
 const express = require('express');
 const app = express();
 
@@ -18,7 +18,7 @@ app.use((req, res) => res.status(404).json({ success: false, message: "404 Error
 // Global 4-Parameter Error Handling Middleware
 app.use((err, req, res, next) => {
     const statusCode = err.statusCode || 500;
-    console.error("❌ Global Catcher:", err.message");
+    console.error("❌ Global Catcher:", err.message);
     res.status(statusCode).json({
         success: false,
         error: {
@@ -30,9 +30,9 @@ app.use((err, req, res, next) => {
 
 const PORT = 3010;
 app.listen(PORT, () => {
-    console.log("🚀 Error Handling Server running on http://localhost: + PORT");
+    console.log(`🚀 Error Handling Server running on http://localhost:${PORT}`);
 }).on('error', (err) => {
-    if (err.code === 'EADDRINUSE') console.log("❌ ERROR: Port  + PORT +  pehle se busy hai!");
-    else console.log("❌ SERVER ERROR:", err.message");
+    if (err.code === 'EADDRINUSE') console.log(`❌ ERROR: Port ${PORT} pehle se busy hai!`);
+    else console.log("❌ SERVER ERROR:", err.message);
 });
 

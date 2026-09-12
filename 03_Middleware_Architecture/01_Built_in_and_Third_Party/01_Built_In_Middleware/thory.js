@@ -1,4 +1,4 @@
-﻿// ========================================= BUILT-IN MIDDLEWARE ======================================= //
+// ========================================= BUILT-IN MIDDLEWARE ======================================= //
 // ChatGPT Se Liya Hua Syntex --->
 // Express me kuch middlewares pehle se aate hain, NPM install ki zarurat nahi.
 //
@@ -15,7 +15,7 @@ const builtinMiddlewareExample = () => {
     app.post('/data', (req, res) => { res.status(200).json(req.body);
     });
 
-    // app.listen(3010, () => console.log("Builtin Middleware Server...");
+    // app.listen(3010, () => console.log("Builtin Middleware Server..."));
 };
 // builtinMiddlewareExample();
 

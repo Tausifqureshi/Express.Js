@@ -1,4 +1,4 @@
-﻿// ========================================= THIRD-PARTY MIDDLEWARE ======================================= //
+// ========================================= THIRD-PARTY MIDDLEWARE ======================================= //
 // ChatGPT Se Liya Hua Syntex --->
 // Duniya bhar ke developers ne NPM par bohot saare middleware daale hain jo Express me plug ho jate hain.
 //
@@ -15,7 +15,8 @@ const thirdPartyExample = () => {
     // app.use(morgan('dev'));
 
     app.get('/api/data', (req, res) => {
-        // Agar morgan laga hota, toh terminal pe URL aur time khud print ho jata res.status(200).json({ message: "Third party middlewares make life easy!" });
+        // Agar morgan laga hota, toh terminal pe URL aur time khud print ho jata
+        res.status(200).json({ message: "Third party middlewares make life easy!" });
     });
 
     // const PORT = 3011;

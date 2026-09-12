@@ -1,4 +1,4 @@
-﻿// ========================================= HTTP STATUS CODES ======================================= //
+// ========================================= HTTP STATUS CODES ======================================= //
 // ChatGPT Se Liya Hua Syntex --->
 // Frontend ko result ke baare me batane ke liye Backend hamesha ek 3-digit ka code bhejta hai.
 //
@@ -14,6 +14,6 @@ const statusCodesExample = () => {
         res.status(404).json({ error: "Page not found!" });
     });
 
-    // app.listen(3009, () => console.log("Status Server running...");
+    // app.listen(3009, () => console.log("Status Server running..."));
 };
 // statusCodesExample();

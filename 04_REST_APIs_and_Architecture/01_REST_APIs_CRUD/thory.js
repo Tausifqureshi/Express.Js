@@ -1,4 +1,4 @@
-﻿// ========================================= REST APIs ======================================= //
+// ========================================= REST APIs ======================================= //
 // ChatGPT Se Liya Hua Syntex --->
 // REST API ek "Rules ka set" hai (Architecture Pattern) taaki frontend aur backend ke beech standard baat-cheet ho sake.
 //
@@ -15,7 +15,7 @@ const restApiExample = () => {
     app.get('/users', (req, res) => { res.status(200).json([{id: 1, name: "Tausif"}]);
     });
 
-    // app.listen(3008, () => console.log("REST Server running...");
+    // app.listen(3008, () => console.log("REST Server running..."));
 };
 // restApiExample();
 

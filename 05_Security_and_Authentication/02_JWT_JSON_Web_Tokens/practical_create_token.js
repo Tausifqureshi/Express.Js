@@ -1,4 +1,4 @@
-﻿// ========================================= REAL-WORLD JWT AUTHENTICATION ======================================= //
+// ========================================= REAL-WORLD JWT AUTHENTICATION ======================================= //
 const express = require('express');
 const app = express();
 app.use(express.json());
@@ -64,9 +64,9 @@ app.use((req, res) => {
 
 const PORT = 6014;
 app.listen(PORT, () => {
-    console.log("🚀 JWT Auth Server running on http://localhost: + PORT");
+    console.log(`🚀 JWT Auth Server running on http://localhost:${PORT}`);
 }).on('error', (err) => {
-    if (err.code === 'EADDRINUSE') console.log("❌ ERROR: Port  + PORT +  pehle se busy hai!");
-    else console.log("❌ SERVER ERROR:", err.message");
+    if (err.code === 'EADDRINUSE') console.log(`❌ ERROR: Port ${PORT} pehle se busy hai!`);
+    else console.log("❌ SERVER ERROR:", err.message);
 });
 

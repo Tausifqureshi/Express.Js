@@ -1,4 +1,4 @@
-﻿// ========================================= REALTIME WEBSOCKETS (SOCKET.IO) ======================================= //
+// ========================================= REALTIME WEBSOCKETS (SOCKET.IO) ======================================= //
 // ChatGPT Se Liya Hua Syntex --->
 // Normal HTTP me client request bhejta hai tabhi server response deta hai. Lekin Real-time apps (jaise WhatsApp, Live Cricket Scores) me Server khud client ko Bina Request ke data bhejta hai.
 //
@@ -27,7 +27,7 @@ const socketIoExample = () => {
     app.use((req, res) => res.status(404).json({ error: "404 Route Not Found" }));
 
     const PORT = 3027;
-    // server.listen(PORT, () => console.log("Socket.io Server running on http://localhost: + PORT)");
+    // server.listen(PORT, () => console.log(`Socket.io Server running on http://localhost:${PORT}`));
     // server.on('error', (err) => { if (err.code === 'EADDRINUSE') console.log("Port busy hai!"); });
 };
 // socketIoExample();

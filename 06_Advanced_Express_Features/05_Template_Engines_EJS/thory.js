@@ -1,4 +1,4 @@
-﻿// ========================================= TEMPLATE ENGINES (EJS) ======================================= //
+// ========================================= TEMPLATE ENGINES (EJS) ======================================= //
 // ChatGPT Se Liya Hua Syntex --->
 // Aajkal frontend React/Angular me banta hai, par kabhi kabhi Express se direct HTML pages bhejna padta hai.
 // Normal HTML me hum variables (jaise user ka naam) pass nahi kar sakte. Isliye EJS (Embedded JavaScript) ka use hota hai.
@@ -24,7 +24,7 @@ const ejsExample = () => {
     app.use((req, res) => res.status(404).json({ error: "404 Route Not Found" }));
 
     // const PORT = 3023;
-    // const server = app.listen(PORT, () => console.log("EJS Server running on http://localhost: + PORT)");
+    // const server = app.listen(PORT, () => console.log(`EJS Server running on http://localhost:${PORT}`));
     // server.on('error', (err) => { if (err.code === 'EADDRINUSE') console.log("Port busy hai!"); });
 };
 // ejsExample();

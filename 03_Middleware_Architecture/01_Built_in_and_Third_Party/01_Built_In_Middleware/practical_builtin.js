@@ -1,4 +1,4 @@
-﻿// ========================================= BUILT-IN MIDDLEWARE PRACTICAL ======================================= //
+// ========================================= BUILT-IN MIDDLEWARE PRACTICAL ======================================= //
 const express = require('express');
 const app = express();
 
@@ -19,9 +19,9 @@ app.use((req, res) => res.status(404).json({ success: false, message: "404 Error
 
 const PORT = 3007;
 app.listen(PORT, () => {
-    console.log("🚀 Built-in Middleware Server running on http://localhost: + PORT");
+    console.log(`🚀 Built-in Middleware Server running on http://localhost:${PORT}`);
 }).on('error', (err) => {
-    if (err.code === 'EADDRINUSE') console.log("❌ ERROR: Port  + PORT +  pehle se busy hai!");
-    else console.log("❌ SERVER ERROR:", err.message");
+    if (err.code === 'EADDRINUSE') console.log(`❌ ERROR: Port ${PORT} pehle se busy hai!`);
+    else console.log("❌ SERVER ERROR:", err.message);
 });
 

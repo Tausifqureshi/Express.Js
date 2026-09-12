@@ -1,4 +1,4 @@
-﻿// ========================================= EXPRESS SETUP & BOILERPLATE ======================================= //
+// ========================================= EXPRESS SETUP & BOILERPLATE ======================================= //
 const express = require('express');
 const app = express();
 
@@ -14,9 +14,9 @@ app.use((req, res) => {
 
 const PORT = 3002;
 app.listen(PORT, () => {
-    console.log("🚀 Setup Server running on http://localhost: + PORT");
+    console.log(`🚀 Setup Server running on http://localhost:${PORT}`);
 }).on('error', (err) => {
-    if (err.code === 'EADDRINUSE') console.log("❌ ERROR: Port  + PORT +  pehle se busy hai!");
-    else console.log("❌ SERVER ERROR:", err.message");
+    if (err.code === 'EADDRINUSE') console.log(`❌ ERROR: Port ${PORT} pehle se busy hai!`);
+    else console.log("❌ SERVER ERROR:", err.message);
 });
 

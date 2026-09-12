@@ -1,4 +1,4 @@
-﻿// ========================================= EXPRESS SERVER CREATION ======================================= //
+// ========================================= EXPRESS SERVER CREATION ======================================= //
 // ChatGPT Se Liya Hua Syntex --->
 // Frontend (jaise React ya HTML) user ko UI dikhata hai. Par data maangne aur bhejne ke liye hume Backend Server chahiye.
 // Node.js me 'http' module se server banana kaafi lamba hota tha, par Express us process ko bas 3-4 lines ka kar deta hai.
@@ -19,7 +19,7 @@ const expressServerExample = () => {
     
     // Server start karne ka logic (Commented hai taaki error na aaye agar multiple files open hon)
     // app.listen(PORT, () => {
-    //     console.log("Express Server is beautifully running on http://localhost: + PORT");
+    //     console.log(`Express Server is beautifully running on http://localhost:${PORT}`);
     // });
 };
 // expressServerExample();

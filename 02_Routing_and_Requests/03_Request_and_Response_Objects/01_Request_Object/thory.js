@@ -1,4 +1,4 @@
-﻿// ========================================= THE REQUEST OBJECT (req) ======================================= //
+// ========================================= THE REQUEST OBJECT (req) ======================================= //
 // ChatGPT Se Liya Hua Syntex --->
 // Jab koi user website par click karta hai, toh wo server ko ek HTTP Request bhejta hai. Express is request ko 'req' object bana deta hai.
 //
@@ -13,10 +13,10 @@ const requestObjectExample = () => {
     app.use(express.json());
 
     app.post('/data', (req, res) => {
-        console.log("req.body"); res.status(200).send("Body mil gayi");
+        console.log(req.body); res.status(200).send("Body mil gayi");
     });
 
-    // app.listen(3006, () => console.log("Req Server running...");
+    // app.listen(3006, () => console.log("Req Server running..."));
 };
 // requestObjectExample();
 

@@ -1,4 +1,4 @@
-﻿// ========================================================================================= //
+// ========================================================================================= //
 // PRACTICAL: AUTHENTICATION (Basic Idea)
 // Run: node 13_Authentication/practical.js
 // ========================================================================================= //
@@ -22,5 +22,5 @@ app.post('/login', (req, res) => {
     }
 });
 
-app.listen(6005, () => console.log("🚀 Auth Server on http://localhost:6005");
+app.listen(6005, () => console.log("🚀 Auth Server on http://localhost:6005"));
 
